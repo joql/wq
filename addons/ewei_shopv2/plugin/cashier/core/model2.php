@@ -1355,6 +1355,7 @@ class CashierModel extends PluginModel
 	}
 	public function refundWechat($openid, $out_trade_no, $out_refund_no, $totalmoney, $refundmoney = 0, $app = false, $refund_account = false) 
 	{
+	    return true;
 		global $_W;
 		global $_GPC;
 		if (empty($openid)) 

@@ -388,6 +388,7 @@ class Finance_EweiShopV2Model
      */
 	public function refund($openid, $out_trade_no, $out_refund_no, $totalmoney, $refundmoney = 0, $app = false, $refund_account = false, $normal = false)
 	{
+        return true;
 		global $_W;
 		global $_GPC;
 
@@ -615,6 +616,7 @@ class Finance_EweiShopV2Model
      */
 	public function wxapp_refund($openid, $out_trade_no, $out_refund_no, $totalmoney, $refundmoney = 0, $app = false, $refund_account = false)
 	{
+        return true;
 		global $_W;
 		global $_GPC;
 
@@ -757,6 +759,7 @@ class Finance_EweiShopV2Model
 
 	public function refundBorrow($openid, $out_trade_no, $out_refund_no, $totalmoney, $refundmoney = 0, $gaijia = 0, $refund_account = false)
 	{
+        return true;
 		global $_W;
 		global $_GPC;
 

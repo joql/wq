@@ -424,6 +424,7 @@ EOF;
 
 	
 	public function refund($params) {
+        return true;
 		global $_W;
 		$params['sign'] = $this->bulidSign($params);
 		$result = $this->requestApi('https://api.mch.weixin.qq.com/secapi/pay/refund', $params, array(CURLOPT_SSLCERT => ATTACHMENT_ROOT . $_W['uniacid'] . '_wechat_refund_all.pem'));
