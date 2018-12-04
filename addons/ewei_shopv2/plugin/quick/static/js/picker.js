@@ -83,6 +83,14 @@ define(['core', 'tpl', 'biz/member/cart', 'biz/plugin/diyform'], function (core,
         } else {
             modal.params.total = 1;
         }
+        $('img.thumb').unbind('click').click(function () {
+            WeixinJSBridge.invoke("imagePreview", {
+                current: $(this).attr('src'),
+                urls: [
+                    $(this).attr('src'),
+                ]
+            });
+        });
         $(".spec-item", modal.container.container).unbind('click').click(function () {
             modal.chooseSpec(this)
         });

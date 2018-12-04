@@ -1,1 +1,498 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('2U([\'V\',\'1W\',\'1x/1J/1w\',\'1x/2G/J\'],c(V,1W,1w,J){b 7={M:0,f:[],e:s,o:[],E:[],a:{Q:\'\',26:\'\',1d:\';\',e:s,t:1,u:0,1Z:s,1U:s,1v:W}};7.1R=c(a){7.a=$.2E(7.a,a||{});8(7.M!=a.M||a.1Y){7.o=[];7.E=[];7.e=s;7.a.u=0;7.M=a.M;b 1n={r:a.M};8(a.1X){1n.1X=a.1X}V.2o(\'f/m\',1n,c(h){8(h.1b==0){F.R.k(\'未找到商品!\');g}7.X=\'\';7.1e=\'\';8(h.1b==2){7.X=h.x.X;7.1e=h.x.1e;7.k();g}8(h.1b==4){7.X=0;7.1C=1;7.T=h.x.T||0;7.S=h.x.S||0;7.k();g}8(h.1b==3){7.X=0;7.1C=0;7.1L=1;7.T=h.x.T||0;7.S=h.x.S||0;7.k();g}8(h.1b==5){F.R.k(h.x.2I);7.M=\'\';g}b 1H=1p.2C.1H*1p.2s;b l=1p.2C.l*1p.2s;h.x.1H=1H;h.x.l=l;7.2r=1W(\'e-m\',h.x);7.f=h.x.f;7.o=h.x.o;7.E=h.x.E;7.1m=h.x.1m;8(7.f.14==\'\'){7.f.14=\'件\'}7.1C=0;7.X=0;7.1L=0;7.k()},W,s)}z{7.k()}};7.11=c(){7.9.11()};7.2w=c(){$(\'.2K\',7.9.9).15(\'q\').q(c(){7.11()});$(\'.U-21\').15(\'q\').q(c(){7.11()});8(7.1m==s){$(\'.U-2L\',7.9.9).2M({2O:7.a.t,2p:7.f.1A,2A:7.f.1B,2Q:"{2A}"+7.f.14+"起售",2J:"最多购买{2p}"+7.f.14,1I:c(B){7.a.t=B}})}z{7.a.t=1}$(".p-n",7.9.9).15(\'q\').q(c(){7.1h(d)});$(\'.1r\',7.9.9).15(\'q\').q(c(){7.23()});$(\'.1t\',7.9.9).15(\'q\').q(c(){8($(d).1Q(\'L\')){g}8(!7.1u()){g}8($(\'.J-9\').j>0){b 10=J.2i(\'.J-9\');8(!10){g}z{V.2o(\'1F/1E/J\',{r:7.f.r,10:10},c(h){1j.1q=V.1G(\'1F/1E\',{r:7.f.r,u:7.a.u,t:7.a.t,2R:h.x.2P})},W,W)}}z{1j.1q=V.1G(\'1F/1E\',{r:7.f.r,u:7.a.u,t:7.a.t})}8(7.a.1v){7.11()}});$(\'.1s\',7.9.9).15(\'q\').q(c(){8($(d).1Q(\'L\')){g}8(!7.1u()){g}8(7.a.1U){7.a.t=1P($(\'.B\',7.9.9).1y());7.a.1U(7.a.t,7.a.u,7.a.Q,7.a.26)}8(7.a.1v){7.11()}});b l=$(12.1i).l()*0.6;b 18=l-$(\'.e-m-1S\').1g()-$(\'.e-m .U-1z\').1g();7.9.9.H(\'.e-m\').N(\'l\',l);7.9.9.H(\'.e-m .e-m-E\').N(\'l\',18);b 1a=12.2e.1a||12.1i.1a;$(1p).22(\'2N\',c(){b 2m=12.2e.1a||12.1i.1a;8(1a>2m){$(\'.U-1z\').N({2n:\'2D\'});$(\'.e-m\').N({l:\'2F\'});b l=$(12.1i).l()*0.6;b 18=l-$(\'.e-m-1S\').1g();7.9.9.H(\'.e-m\').N(\'l\',l);7.9.9.H(\'.e-m .e-m-E\').N(\'l\',18);$(\'.e-m\').I(\'2l\')}z{$(\'.U-1z\').N({2n:\'2H\'});b l=$(12.1i).l()*0.6;b 18=l-$(\'.e-m-1S\').1g()-$(\'.e-m .U-1z\').1g();7.9.9.H(\'.e-m\').N(\'l\',l);7.9.9.H(\'.e-m .e-m-E\').N(\'l\',18);$(\'.e-m\').I(\'2l\')}})};7.23=c(){8(!7.f.29){F.R.k(\'此商品不可加入购物车<2T>请直接点击立刻购买\');g}8($(d).1Q(\'L\')){g}8(!7.1u()){g}7.a.t=1P($(\'.B\',7.9.9).1y());8($(\'.J-9\').j>0){F.2h.k(\'3i\');b 10=J.2i(\'.e-m .J-9\');F.2h.17();8(!10){g}1w.2f(7.M,7.a.u,7.a.t,10,c(h){F.R.k(\'添加成功\');7.1V(h.27)})}z{1w.2f(7.M,7.a.u,7.a.t,s,c(h){F.R.k(\'添加成功\');7.1V(h.27)})}8(7.a.1v){7.11()}};7.k=c(){8(7.X){F.3k(7.X,c(){8(7.1e!=\'\'&&7.1e!=3m){1j.1q=7.1e}});g}8(7.1C){b 19=V.1G(\'f/3h\',{r:7.M});19=19.25("./3a.2V?","");2B([\'1x/1J/1f\'],c(1f){1f.2z({20:\'38\',19:2y(19),T:7.T,S:7.S,2v:c(){b 1c=7.a;1c.1Y=W;7.1R(1c)}})});g}8(7.1L){2B([\'1x/1J/1f\'],c(1f){1f.2z({20:\'36\',19:2y(1j.1q),T:7.T,S:7.S,2v:c(){b 1c=7.a;1c.1Y=W;7.1R(1c)}})});g}7.9=2g 31({30:7.2r,2Z:"m-7"});7.2w();8(7.1m&&7.1m.1b==0){$(\'.U-21\').17(),$(\'.m-7\').17();8((2X(7.E.j)===\'2W\'||7.E.j<=0)&&$(\'.J-9\').j<=0){8(7.a.20==\'33\'){1j.1q=V.1G(\'1F/1E\',{r:7.f.r,t:1,u:0});g}z{7.23();g}}}$(\'.U-21\').k(),$(\'.m-7\').k();8(7.a.2t){$(\'.1s\',7.9.9).k()}z{$(\'.1t\',7.9.9).k();8(7.f.29){$(\'.1r\',7.9.9).k()}}8(7.a.u!=\'0\'){7.2c()}7.9.k();8(7.o.j==1){$.C(7.E,c(){b 2a=d.o;8(d.w==0){$(".p-n"+2a+"").G("p-n").G("P-O").I("L").1k("q")}})}};7.2c=c(){$(".p-n").G(\'P-O\');b u=7.a.u;b o=s;$.C(7.E,c(){8(d.r==u){o=d.o.1d(\'13\');g s}});8(o){b n=s;b 1o=[];$(".p-n").C(c(){b n=$(d),2d=n.A(\'r\');$.C(o,c(){8(d==2d){1o.Z(n);n.I(\'P-O\')}})});8(1o.j>0){b 2j=1o[1o.j-1];7.1h(2j,s)}}};7.1h=c(1n,1I){b $d=$(1n);$d.3d(\'.p\').H(\'.p-n\').G(\'P-O\'),$d.I(\'P-O\');b 16=$d.A(\'16\')||\'\';8(16){$(\'.16\',7.9.9).3c(\'37\',16)}7.a.26=16;b D=$(".p-n.P-O",7.9.9);b 1N=[];8(D.j<=7.o.j){$.C(7.E,c(){8((7.o.j-D.j)==1){b K=[];b y=d.o;$.C(D,c(){8(y.24(d.1D("A-r"))>=0){K.Z(d.1D("A-r"))}});8(K.j==D.j){2b(b i=0;i<K.j;i++){y=y.25(K[i],"")}y=y.1d("13");b e=[];$.C(y,c(i,v){b A=$.1M(v);8(\'\'!=A){e.Z(A)}});8(d.w<=0&&d.w!=-1){$(".p-n"+e[0]+"").G("p-n").G("P-O").I("L").1k("q")}z{$(".p-n"+e[0]+"").G("L").I("p-n").1k("q").22("q",c(){7.1h(d)})}}}z 8(7.o.j==D.j){b K=[];b y=d.o;$.C(D,c(){8(y.24(d.1D("A-r"))>=0&&y.24($d.A("r"))>=0){K.Z(d.1D("A-r"))}});b e=[];8(K.j==(7.o.j-1)){2b(b i=0;i<K.j;i++){y=y.25(K[i],"")}y=y.1d("13");$.C(y,c(i,v){b A=$.1M(v);8(\'\'!=A){e.Z(A)}});8(d.w<=0&&d.w!=-1){$(".p-n"+e[0]+"").G("p-n").G("P-O").I("L").1k("q")}z{$(".p-n"+e[0]+"").G("L").I("p-n").1k("q").22("q",c(){7.1h(d)})}}}})}8(D.j==7.o.j){D.C(c(){1N.Z($(d).A(\'r\'))});$.C(7.E,c(){b o=d.o.1d(\'13\').28().1K(\'13\');8(o==1N.28().1K(\'13\')){b w=d.w==\'-1\'?\'无限\':d.w;$(\'.t\',7.9.9).Y(w);8(d.w!=\'-1\'&&d.w<=0){$(\'.1s\',7.9).k().I(\'L\').Y(\'库存不足\');$(\'.1r,.1t\',7.9).17()}z{8(7.a.2t){$(\'.1s\',7.9).G(\'L\').Y(\'确定\');$(\'.1r,.1t\',7.9).17()}z{$(\'.1r,.1t\',7.9).k(),$(\'.1s\').17()}}b 2k=2u.3f(2g 2u())/39;8(7.f.34>0&&(7.f.2q==0||7.f.2q>2k)){$(\'.2x\',7.9.9).Y(d.2Y)}z{$(\'.2x\',7.9.9).Y(d.32)}7.e=d;7.a.u=d.r}})}b Q=[];D.C(c(){Q.Z($.1M($(d).Y()))});7.a.Q=Q.1K(7.a.1d);$(\'.35-Q\',7.9.9).Y(\'已选 \'+7.a.Q);8(1I){8(7.a.1Z){7.a.1Z(7.a.t,7.a.u,7.a.Q)}}};7.1u=c(){b p=$(".p",7.9.9);b D=W;p.C(c(){8($(d).H(\'.p-n.P-O\').j<=0){F.R.k(\'请选择\'+$(d).H(\'.3j\').Y());D=s;g s}});8(D){8(7.e.w!=-1&&7.e.w<=0){F.R.k(\'库存不足\');g s}b B=1P($(\'.B\',7.9.9).1y());8(B<=0){B=1}8(B>7.e.w){B=7.e.w}$(".B",7.9.9).1y(B);8(7.f.1A>0&&B>7.f.1A){F.R.k(\'最多购买 \'+7.f.1A+\' \'+7.f.14);g s}8(7.f.1B>0&&B<7.f.1B){F.R.k(7.f.1B+7.f.14+\'起售\');g s}g W}g s};7.1V=c(1O){8($("#1T").j>0){b 1l=$("#1T").H(".1l");8(1l.j<1){$("#1T").2S(\'<3e 3g="1l">\'+1O+\'</3l>\')}z{1l.3b(1O)}}};g 7});',62,209,'|||||||modal|if|container|params|var|function|this|option|goods|return|ret||length|show|height|picker|item|specs|spec|click|id|false|total|optionid||stock|result|specOpion|else|data|num|each|selected|options|FoxUI|removeClass|find|addClass|diyform|specid|disabled|goodsid|css|danger|btn|titles|toast|imgcode|endtime|fui|core|true|followtip|html|push|diyformdata|close|document|_|unit|unbind|thumb|hide|optionsHeight|backurl|clientHeight|status|args|split|followurl|account|outerHeight|chooseSpec|body|location|off|badge|seckillinfo|obj|selectitems|window|href|cartbtn|confirmbtn|buybtn|check|autoClose|cart|biz|val|navbar|maxbuy|minbuy|needlogin|getAttribute|create|order|getUrl|width|callback|member|join|mustbind|trim|itemids|count|parseInt|hasClass|open|cell|menucart|onConfirm|changeCartcount|tpl|liveid|refresh|onSelected|action|mask|on|addToCart|indexOf|replace|optionthumb|cartcount|sort|canAddCart|thisspecs|for|initOption|itemid|documentElement|add|new|loader|getData|lastitem|timestamp|android|nowClientHeight|display|json|max|preselltimeend|containerHTML|devicePixelRatio|showConfirm|Date|success|init|price|btoa|initQuick|min|require|screen|none|extend|auto|plugin|block|message|maxToast|closebtn|number|numbers|resize|value|goods_data_id|minToast|gdid|append|br|define|php|undefined|typeof|presellprice|extraClass|content|FoxUIModal|marketprice|buy|ispresell|info|bind|src|login|1000|index|text|attr|closest|span|parse|class|detail|mini|title|confirm|div|null'.split('|'),0,{}))
+define(['core', 'tpl', 'biz/member/cart', 'biz/plugin/diyform'], function (core, tpl, cart, diyform) {
+    var modal = {
+        goodsid: 0,
+        goods: [],
+        option: false,
+        specs: [],
+        options: [],
+        params: {
+            titles: '',
+            optionthumb: '',
+            split: ';',
+            option: false,
+            total: 1,
+            optionid: 0,
+            onSelected: false,
+            onConfirm: false,
+            autoClose: true
+        }
+    };
+    modal.open = function (params) {
+        modal.params = $.extend(modal.params, params || {});
+        if (modal.goodsid != params.goodsid || params.refresh) {
+            modal.specs = [];
+            modal.options = [];
+            modal.option = false;
+            modal.params.optionid = 0;
+            modal.goodsid = params.goodsid;
+            var obj = {id: params.goodsid};
+            if (params.liveid) {
+                obj.liveid = params.liveid
+            }
+            core.json('goods/picker', obj, function (ret) {
+                if (ret.status == 0) {
+                    FoxUI.toast.show('未找到商品!');
+                    return
+                }
+                modal.followtip = '';
+                modal.followurl = '';
+                if (ret.status == 2) {
+                    modal.followtip = ret.result.followtip;
+                    modal.followurl = ret.result.followurl;
+                    modal.show();
+                    return
+                }
+                if (ret.status == 4) {
+                    modal.followtip = 0;
+                    modal.needlogin = 1;
+                    modal.endtime = ret.result.endtime || 0;
+                    modal.imgcode = ret.result.imgcode || 0;
+                    modal.show();
+                    return
+                }
+                if (ret.status == 3) {
+                    modal.followtip = 0;
+                    modal.needlogin = 0;
+                    modal.mustbind = 1;
+                    modal.endtime = ret.result.endtime || 0;
+                    modal.imgcode = ret.result.imgcode || 0;
+                    modal.show();
+                    return
+                }
+                if (ret.status == 5) {
+                    FoxUI.toast.show(ret.result.message);
+                    modal.goodsid = '';
+                    return
+                }
+                var width = window.screen.width * window.devicePixelRatio;
+                var height = window.screen.height * window.devicePixelRatio;
+                ret.result.width = width;
+                ret.result.height = height;
+                modal.containerHTML = tpl('option-picker', ret.result);
+                modal.goods = ret.result.goods;
+                modal.specs = ret.result.specs;
+                modal.options = ret.result.options;
+                modal.seckillinfo = ret.result.seckillinfo;
+                if (modal.goods.unit == '') {
+                    modal.goods.unit = '件'
+                }
+                modal.needlogin = 0;
+                modal.followtip = 0;
+                modal.mustbind = 0;
+                modal.show()
+            }, true, false)
+        } else {
+            modal.show()
+        }
+    };
+    modal.close = function () {
+        modal.container.close()
+    };
+    modal.init = function () {
+        $('.closebtn', modal.container.container).unbind('click').click(function () {
+            modal.close()
+        });
+        $('.fui-mask').unbind('click').click(function () {
+            modal.close()
+        });
+        if (modal.seckillinfo == false) {
+            $('.fui-number', modal.container.container).numbers({
+                value: modal.params.total,
+                max: modal.goods.maxbuy,
+                min: modal.goods.minbuy,
+                minToast: "{min}" + modal.goods.unit + "起售",
+                maxToast: "最多购买{max}" + modal.goods.unit,
+                callback: function (num) {
+                    modal.params.total = num
+                }
+            })
+        } else {
+            modal.params.total = 1
+        }
+        $('img.thumb').unbind('click').click(function () {
+            WeixinJSBridge.invoke("imagePreview", {
+                current: $(this).attr('src'),
+                urls: [
+                    $(this).attr('src'),
+                ]
+            });
+        });
+        $(".spec-item", modal.container.container).unbind('click').click(function () {
+            modal.chooseSpec(this)
+        });
+        $('.cartbtn', modal.container.container).unbind('click').click(function () {
+            modal.addToCart()
+        });
+        $('.buybtn', modal.container.container).unbind('click').click(function () {
+            if ($(this).hasClass('disabled')) {
+                return
+            }
+            if (!modal.check()) {
+                return
+            }
+            if ($('.diyform-container').length > 0) {
+                var diyformdata = diyform.getData('.diyform-container');
+                if (!diyformdata) {
+                    return
+                } else {
+                    core.json('order/create/diyform', {id: modal.goods.id, diyformdata: diyformdata}, function (ret) {
+                        location.href = core.getUrl('order/create', {
+                            id: modal.goods.id,
+                            optionid: modal.params.optionid,
+                            total: modal.params.total,
+                            gdid: ret.result.goods_data_id
+                        })
+                    }, true, true)
+                }
+            } else {
+                location.href = core.getUrl('order/create', {
+                    id: modal.goods.id,
+                    optionid: modal.params.optionid,
+                    total: modal.params.total
+                })
+            }
+            if (modal.params.autoClose) {
+                modal.close()
+            }
+        });
+        $('.confirmbtn', modal.container.container).unbind('click').click(function () {
+            if ($(this).hasClass('disabled')) {
+                return
+            }
+            if (!modal.check()) {
+                return
+            }
+            if (modal.params.onConfirm) {
+                modal.params.total = parseInt($('.num', modal.container.container).val());
+                modal.params.onConfirm(modal.params.total, modal.params.optionid, modal.params.titles, modal.params.optionthumb)
+            }
+            if (modal.params.autoClose) {
+                modal.close()
+            }
+        });
+        var height = $(document.body).height() * 0.6;
+        var optionsHeight = height - $('.option-picker-cell').outerHeight() - $('.option-picker .fui-navbar').outerHeight();
+        modal.container.container.find('.option-picker').css('height', height);
+        modal.container.container.find('.option-picker .option-picker-options').css('height', optionsHeight);
+        var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+        $(window).on('resize', function () {
+            var nowClientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+            if (clientHeight > nowClientHeight) {
+                $('.fui-navbar').css({display: 'none'});
+                $('.option-picker').css({height: 'auto'});
+                var height = $(document.body).height() * 0.6;
+                var optionsHeight = height - $('.option-picker-cell').outerHeight();
+                modal.container.container.find('.option-picker').css('height', height);
+                modal.container.container.find('.option-picker .option-picker-options').css('height', optionsHeight);
+                $('.option-picker').addClass('android')
+            } else {
+                $('.fui-navbar').css({display: 'block'});
+                var height = $(document.body).height() * 0.6;
+                var optionsHeight = height - $('.option-picker-cell').outerHeight() - $('.option-picker .fui-navbar').outerHeight();
+                modal.container.container.find('.option-picker').css('height', height);
+                modal.container.container.find('.option-picker .option-picker-options').css('height', optionsHeight);
+                $('.option-picker').addClass('android')
+            }
+        })
+    };
+    modal.addToCart = function () {
+        if (!modal.goods.canAddCart) {
+            FoxUI.toast.show('此商品不可加入购物车<br>请直接点击立刻购买');
+            return
+        }
+        if ($(this).hasClass('disabled')) {
+            return
+        }
+        if (!modal.check()) {
+            return
+        }
+        modal.params.total = parseInt($('.num', modal.container.container).val());
+        if ($('.diyform-container').length > 0) {
+            FoxUI.loader.show('mini');
+            var diyformdata = diyform.getData('.option-picker .diyform-container');
+            FoxUI.loader.hide();
+            if (!diyformdata) {
+                return
+            }
+            cart.add(modal.goodsid, modal.params.optionid, modal.params.total, diyformdata, function (ret) {
+                FoxUI.toast.show('添加成功');
+                modal.changeCartcount(ret.cartcount)
+            })
+        } else {
+            cart.add(modal.goodsid, modal.params.optionid, modal.params.total, false, function (ret) {
+                FoxUI.toast.show('添加成功');
+                modal.changeCartcount(ret.cartcount)
+            })
+        }
+        if (modal.params.autoClose) {
+            modal.close()
+        }
+    };
+    modal.show = function () {
+        if (modal.followtip) {
+            FoxUI.confirm(modal.followtip, function () {
+                if (modal.followurl != '' && modal.followurl != null) {
+                    location.href = modal.followurl
+                }
+            });
+            return
+        }
+        if (modal.needlogin) {
+            var backurl = core.getUrl('goods/detail', {id: modal.goodsid});
+            backurl = backurl.replace("./index.php?", "");
+            require(['biz/member/account'], function (account) {
+                account.initQuick({
+                    action: 'login',
+                    backurl: btoa(backurl),
+                    endtime: modal.endtime,
+                    imgcode: modal.imgcode,
+                    success: function () {
+                        var args = modal.params;
+                        args.refresh = true;
+                        modal.open(args)
+                    }
+                })
+            });
+            return
+        }
+        if (modal.mustbind) {
+            require(['biz/member/account'], function (account) {
+                account.initQuick({
+                    action: 'bind',
+                    backurl: btoa(location.href),
+                    endtime: modal.endtime,
+                    imgcode: modal.imgcode,
+                    success: function () {
+                        var args = modal.params;
+                        args.refresh = true;
+                        modal.open(args)
+                    }
+                })
+            });
+            return
+        }
+        modal.container = new FoxUIModal({content: modal.containerHTML, extraClass: "picker-modal"});
+        modal.init();
+        if (modal.seckillinfo && modal.seckillinfo.status == 0) {
+            $('.fui-mask').hide(), $('.picker-modal').hide();
+            if ((typeof(modal.options.length) === 'undefined' || modal.options.length <= 0) && $('.diyform-container').length <= 0) {
+                if (modal.params.action == 'buy') {
+                    location.href = core.getUrl('order/create', {id: modal.goods.id, total: 1, optionid: 0});
+                    return
+                } else {
+                    modal.addToCart();
+                    return
+                }
+            }
+        }
+        $('.fui-mask').show(), $('.picker-modal').show();
+        if (modal.params.showConfirm) {
+            $('.confirmbtn', modal.container.container).show()
+        } else {
+            $('.buybtn', modal.container.container).show();
+            if (modal.goods.canAddCart) {
+                $('.cartbtn', modal.container.container).show()
+            }
+        }
+        if (modal.params.optionid != '0') {
+            modal.initOption()
+        }
+        modal.container.show();
+        if (modal.specs.length == 1) {
+            $.each(modal.options, function () {
+                var thisspecs = this.specs;
+                if (this.stock == 0) {
+                    $(".spec-item" + thisspecs + "").removeClass("spec-item").removeClass("btn-danger").addClass("disabled").off("click")
+                }
+            })
+        }
+    };
+    modal.initOption = function () {
+        $(".spec-item").removeClass('btn-danger');
+        var optionid = modal.params.optionid;
+        var specs = false;
+        $.each(modal.options, function () {
+            if (this.id == optionid) {
+                specs = this.specs.split('_');
+                return false
+            }
+        });
+        if (specs) {
+            var item = false;
+            var selectitems = [];
+            $(".spec-item").each(function () {
+                var item = $(this), itemid = item.data('id');
+                $.each(specs, function () {
+                    if (this == itemid) {
+                        selectitems.push(item);
+                        item.addClass('btn-danger')
+                    }
+                })
+            });
+            if (selectitems.length > 0) {
+                var lastitem = selectitems[selectitems.length - 1];
+                modal.chooseSpec(lastitem, false)
+            }
+        }
+    };
+    modal.chooseSpec = function (obj, callback) {
+        var $this = $(obj);
+        $this.closest('.spec').find('.spec-item').removeClass('btn-danger'), $this.addClass('btn-danger');
+        var thumb = $this.data('thumb') || '';
+        if (thumb) {
+            $('.thumb', modal.container.container).attr('src', thumb)
+        }
+        modal.params.optionthumb = thumb;
+        var selected = $(".spec-item.btn-danger", modal.container.container);
+        var itemids = [];
+        if (selected.length <= modal.specs.length) {
+            $.each(modal.options, function () {
+                if ((modal.specs.length - selected.length) == 1) {
+                    var specid = [];
+                    var specOpion = this.specs;
+                    $.each(selected, function () {
+                        if (specOpion.indexOf(this.getAttribute("data-id")) >= 0) {
+                            specid.push(this.getAttribute("data-id"))
+                        }
+                    });
+                    if (specid.length == selected.length) {
+                        for (var i = 0; i < specid.length; i++) {
+                            specOpion = specOpion.replace(specid[i], "")
+                        }
+                        specOpion = specOpion.split("_");
+                        var option = [];
+                        $.each(specOpion, function (i, v) {
+                            var data = $.trim(v);
+                            if ('' != data) {
+                                option.push(data)
+                            }
+                        });
+                        if (this.stock <= 0 && this.stock != -1) {
+                            $(".spec-item" + option[0] + "").removeClass("spec-item").removeClass("btn-danger").addClass("disabled").off("click")
+                        } else {
+                            $(".spec-item" + option[0] + "").removeClass("disabled").addClass("spec-item").off("click").on("click", function () {
+                                modal.chooseSpec(this)
+                            })
+                        }
+                    }
+                } else if (modal.specs.length == selected.length) {
+                    var specid = [];
+                    var specOpion = this.specs;
+                    $.each(selected, function () {
+                        if (specOpion.indexOf(this.getAttribute("data-id")) >= 0 && specOpion.indexOf($this.data("id")) >= 0) {
+                            specid.push(this.getAttribute("data-id"))
+                        }
+                    });
+                    var option = [];
+                    if (specid.length == (modal.specs.length - 1)) {
+                        for (var i = 0; i < specid.length; i++) {
+                            specOpion = specOpion.replace(specid[i], "")
+                        }
+                        specOpion = specOpion.split("_");
+                        $.each(specOpion, function (i, v) {
+                            var data = $.trim(v);
+                            if ('' != data) {
+                                option.push(data)
+                            }
+                        });
+                        if (this.stock <= 0 && this.stock != -1) {
+                            $(".spec-item" + option[0] + "").removeClass("spec-item").removeClass("btn-danger").addClass("disabled").off("click")
+                        } else {
+                            $(".spec-item" + option[0] + "").removeClass("disabled").addClass("spec-item").off("click").on("click", function () {
+                                modal.chooseSpec(this)
+                            })
+                        }
+                    }
+                }
+            })
+        }
+        if (selected.length == modal.specs.length) {
+            selected.each(function () {
+                itemids.push($(this).data('id'))
+            });
+            $.each(modal.options, function () {
+                var specs = this.specs.split('_').sort().join('_');
+                if (specs == itemids.sort().join('_')) {
+                    var stock = this.stock == '-1' ? '无限' : this.stock;
+                    $('.total', modal.container.container).html(stock);
+                    if (this.stock != '-1' && this.stock <= 0) {
+                        $('.confirmbtn', modal.container).show().addClass('disabled').html('库存不足');
+                        $('.cartbtn,.buybtn', modal.container).hide()
+                    } else {
+                        if (modal.params.showConfirm) {
+                            $('.confirmbtn', modal.container).removeClass('disabled').html('确定');
+                            $('.cartbtn,.buybtn', modal.container).hide()
+                        } else {
+                            $('.cartbtn,.buybtn', modal.container).show(), $('.confirmbtn').hide()
+                        }
+                    }
+                    var timestamp = Date.parse(new Date()) / 1000;
+                    if (modal.goods.ispresell > 0 && (modal.goods.preselltimeend == 0 || modal.goods.preselltimeend > timestamp)) {
+                        $('.price', modal.container.container).html(this.presellprice)
+                    } else {
+                        $('.price', modal.container.container).html(this.marketprice)
+                    }
+                    modal.option = this;
+                    modal.params.optionid = this.id
+                }
+            })
+        }
+        var titles = [];
+        selected.each(function () {
+            titles.push($.trim($(this).html()))
+        });
+        modal.params.titles = titles.join(modal.params.split);
+        $('.info-titles', modal.container.container).html('已选 ' + modal.params.titles);
+        if (callback) {
+            if (modal.params.onSelected) {
+                modal.params.onSelected(modal.params.total, modal.params.optionid, modal.params.titles)
+            }
+        }
+    };
+    modal.check = function () {
+        var spec = $(".spec", modal.container.container);
+        var selected = true;
+        spec.each(function () {
+            if ($(this).find('.spec-item.btn-danger').length <= 0) {
+                FoxUI.toast.show('请选择' + $(this).find('.title').html());
+                selected = false;
+                return false
+            }
+        });
+        if (selected) {
+            if (modal.option.stock != -1 && modal.option.stock <= 0) {
+                FoxUI.toast.show('库存不足');
+                return false
+            }
+            var num = parseInt($('.num', modal.container.container).val());
+            if (num <= 0) {
+                num = 1
+            }
+            if (num > modal.option.stock) {
+                num = modal.option.stock
+            }
+            $(".num", modal.container.container).val(num);
+            if (modal.goods.maxbuy > 0 && num > modal.goods.maxbuy) {
+                FoxUI.toast.show('最多购买 ' + modal.goods.maxbuy + ' ' + modal.goods.unit);
+                return false
+            }
+            if (modal.goods.minbuy > 0 && num < modal.goods.minbuy) {
+                FoxUI.toast.show(modal.goods.minbuy + modal.goods.unit + '起售');
+                return false
+            }
+            return true
+        }
+        return false
+    };
+    modal.changeCartcount = function (count) {
+        if ($("#menucart").length > 0) {
+            var badge = $("#menucart").find(".badge");
+            if (badge.length < 1) {
+                $("#menucart").append('<span class="badge">' + count + '</div>')
+            } else {
+                badge.text(count)
+            }
+        }
+    };
+    return modal
+});
