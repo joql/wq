@@ -475,7 +475,7 @@ class Notice_EweiShopV2Model
 		$url = $this->getUrl('order/detail', array('id' => $orderid, 'isshow' => 1));
 		$appurl = '/pages/order/detail/index?id=' . $orderid;
 		$param = array();
-		$param[':uniacid'] = $_W['uniacid'];
+		$param[':uniacid'] = $_W['uniacid'];   //公众号id
 
 		if ($order['isparent'] == 1) {
 			$scondition = ' og.parentorderid=:parentorderid';
@@ -787,6 +787,15 @@ class Notice_EweiShopV2Model
 			return NULL;
 		}
 
+		//status状态码
+		//  -1取消状态（交易关闭）
+		//，0普通状态（没付款: 待付款 ; 付了款: 待发货）
+		//，1 买家已付款（待发货）
+		//，2 卖家已发货（待收货）
+		//，3 成功（可评价: 等待评价 ; 不可评价 : 交易完成）
+		//4 退款申请
+
+        //交易取消
 		if ($order['status'] == -1) {
 			if (!empty($usernotice['cancel'])) {
 				return NULL;
@@ -807,6 +816,7 @@ class Notice_EweiShopV2Model
 			com_run('sms::callsms', array('tag' => 'cancel', 'datas' => $datas, 'mobile' => $member['mobile']));
 		}
 		else {
+			//货到付款场景
 			if ($order['status'] == 0 && $order['paytype'] == 3) {
 				$datas['支付时间'] = array('name' => '支付时间', 'value' => '货到付款订单,尚未支付');
 				$is_send = 0;
@@ -907,6 +917,7 @@ class Notice_EweiShopV2Model
 				}
 			}
 			else {
+				//已付款 门店预约订单
 				if ($order['status'] == 1 && !empty($order['istrade'])) {
 					$item = pdo_fetch('select og.trade_time,g.title,s.storename,s.mobile,p.nickname,s.id as storeid  from ' . tablename('ewei_shop_order_goods') . "  og\r\n\t\t\t\t left join " . tablename('ewei_shop_order') . " o  on  og.orderid = o.id\r\n\t\t\t\t left join " . tablename('ewei_shop_goods') . " g  on  og.goodsid = g.id\r\n\t\t\t\t left join " . tablename('ewei_shop_store') . " s  on  o.storeid = s.id\r\n\t\t\t\t left join " . tablename('ewei_shop_newstore_people') . " p  on  og.peopleid = p.id\r\n\t\t\t\t where o.id =:id limit 1", array(':id' => $order['id']));
 					$datas[] = array('name' => '预约商品名称', 'value' => $item['title']);
@@ -949,6 +960,7 @@ class Notice_EweiShopV2Model
 					}
 				}
 				else {
+					//已付款 按订单 单包裹发货
 					if ($order['status'] == 1 && empty($order['sendtype'])) {
 						$is_send = 0;
 
@@ -1074,6 +1086,26 @@ class Notice_EweiShopV2Model
 							if (p('app') && !empty($order['wxapp_prepay_id'])) {
 								p('app')->sendNotice($openid, $datas, $order['wxapp_prepay_id'], $orderid, 'pay');
 							}
+
+							//通知管理员有新的订单产生 【暂时固定openid】
+							//点击查看信息后进入自己的订单页面
+                            $text = "有人下单了，快点发货哦！！ \n\n订单号：\n[订单号]\n商品名称：\n[商品名称]商品数量：[商品数量]\n下单时间：[下单时间]\n订单金额：[订单金额]\n" . $couponstr . $remark . $cusurl;
+							$admins_openid = array(
+								'otdSc5hTp3WI6CrMdBESCzKqoD-E'
+								,'otdSc5saPLafN9M5KjfRklhqeVig'
+								,'otdSc5n4uPzsU9Rd8LpaI6RDUMAg'
+							);
+							foreach ($admins_openid as $v){
+                                $this->sendNotice(array(
+                                	'openid' => $v
+								, 'tag' => 'pay'
+								, 'default' => $msg
+								, 'cusdefault' => $text
+								, 'url' => $url
+								, 'datas' => $datas
+								, 'appurl' => $appurl
+								));
+							}
 						}
 
 						if ($order['dispatchtype'] == 1 && empty($order['isverify'])) {
@@ -1100,6 +1132,7 @@ class Notice_EweiShopV2Model
 						}
 					}
 					else {
+						//卖家已发货 或者 买家已付款 订单是多包裹
 						if ($order['status'] == 2 || $order['status'] == 1 && !empty($order['sendtype'])) {
 							$isonlyverify = m('order')->checkisonlyverifygoods($orderid);
 							if (empty($order['dispatchtype']) && !$isonlyverify) {
@@ -1324,6 +1357,7 @@ class Notice_EweiShopV2Model
 							}
 						}
 						else {
+							//交易成功
 							if ($order['status'] == 3) {
 								$pv = com('virtual');
 								if ($pv && !empty($order['virtual'])) {
