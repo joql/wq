@@ -86,7 +86,6 @@ class api {
     //刷新token
     function refreshAccessToken($get,$post){
         logging_run($this->account->clearAccessToken(), 'trace', 'accessToken');
-        $this->account->clearAccessToken();
         $token = $this->account->getAccessToken();
         if(is_array($token)){
             returnAjax(0,'token刷新失败');
