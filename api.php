@@ -29,11 +29,13 @@ if(!empty($_GPC['appid'])) {
 		$id = pdo_fetchcolumn("SELECT acid FROM " . tablename('account_wechats') . " WHERE `key` = :appid", array(':appid' => $appid));
 	}
 }
-/*if(empty($id)) {
+if(empty($id)) {
 	$id = intval($_GPC['id']);
-  	$forward = function($data,$get){
+
+	/*//微信通知转发
+	$forward = function($data,$get){
     	$ch = curl_init();
-        $timeout = 30; 
+        $timeout = 30;
       	$url = 'http://console.nuoyun.tv/Api/weUserInfo?';
       	foreach($get as $k=>$v){
         	$url.= $k.'='.$v.'&';
@@ -41,14 +43,14 @@ if(!empty($_GPC['appid'])) {
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HTTPHEADER, Array("Content-Type:text/xml; charset=utf-8"));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0); 
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);//Post提交的数据包
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
         curl_setopt($ch, CURLOPT_HEADER, 0);
         return curl_exec($ch);
     };
-  	$forward(file_get_contents("php://input"),$_GET);
-}*/
+  	$forward(file_get_contents("php://input"),$_GET);*/
+}
 if (!empty($id)) {
 	$uniacid = pdo_getcolumn('account', array('acid' => $id), 'uniacid');
 	$_W['account'] = uni_fetch($uniacid);
