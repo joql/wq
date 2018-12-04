@@ -32,7 +32,8 @@ $config['cookie']['path'] = '/';
 
 // --------------------------  CONFIG SETTING  --------------------------- //
 $config['setting']['charset'] = 'utf-8';
-$config['setting']['cache'] = 'mysql';
+//$config['setting']['cache'] = 'mysql';
+$config['setting']['cache'] = 'redis';
 $config['setting']['timezone'] = 'Asia/Shanghai';
 $config['setting']['memory_limit'] = '256M';
 $config['setting']['filemode'] = 0644;
@@ -40,6 +41,7 @@ $config['setting']['authkey'] = '2bd34568';
 $config['setting']['founder'] = '1';
 $config['setting']['development'] = 0;
 $config['setting']['referrer'] = 0;
+$config['setting']['https'] = 1;
 
 // --------------------------  CONFIG UPLOAD  --------------------------- //
 $config['upload']['image']['extentions'] = array('gif', 'jpg', 'jpeg', 'png');
@@ -55,6 +57,13 @@ $config['setting']['memcache']['pconnect'] = 1;
 $config['setting']['memcache']['timeout'] = 30;
 $config['setting']['memcache']['session'] = 1;
 
+// --------------------------  CONFIG REDIS  --------------------------- //
+$config['setting']['redis']['server'] = '127.0.0.1';  //
+$config['setting']['redis']['port'] = 6379;   //
+$config['setting']['redis']['pconnect'] = 1; 
+$config['setting']['redis']['auth'] = '';  //redis
+$config['setting']['redis']['requirepass'] = '';   //redis
+$config['setting']['redis']['timeout'] = 10;
 // --------------------------  CONFIG PROXY  --------------------------- //
 $config['setting']['proxy']['host'] = '';
 $config['setting']['proxy']['auth'] = '';
