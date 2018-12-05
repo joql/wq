@@ -1072,7 +1072,7 @@ class Notice_EweiShopV2Model
 							}
 
 							$cusurl = '<a href=\'' . $url . '\'>点击查看详情</a>';
-							$text = "您的订单已经成功支付，我们将尽快为您安排发货！！ \n\n订单号：\n[订单号]\n商品名称：\n[商品名称]商品数量：[商品数量]\n下单时间：[下单时间]\n订单金额：[订单金额]\n" . $couponstr . $remark . $cusurl;
+							$text = "您的订单已经成功支付，我们将尽快为您安排发货！！ \n\n订单号：\n[订单号]\n商品名称：\n[商品名称]\n\n商品数量：[商品数量]\n下单时间：[下单时间]\n订单金额：[订单金额]\n" . $couponstr . $remark . $cusurl;
 							$msg = array(
 								'first'    => array('value' => '您的订单已于' . date('Y-m-d H:i', $order['paytime']) . "成功支付，我们将尽快为您安排发货！!\n", 'color' => '#4b9528'),
 								'keyword1' => array('title' => '订单编号', 'value' => $order['ordersn'], 'color' => '#000000'),
@@ -1089,7 +1089,7 @@ class Notice_EweiShopV2Model
 
 							//通知管理员有新的订单产生 【暂时固定openid】
 							//点击查看信息后进入自己的订单页面
-                            $text = "有人下单了，快点发货哦！！ \n\n订单号：\n[订单号]\n商品名称：\n[商品名称]商品数量：[商品数量]\n下单时间：[下单时间]\n订单金额：[订单金额]\n" . $couponstr . $remark . $cusurl;
+                            $text = "有人下单了，快点发货哦！！ \n\n订单号：\n[订单号]\n商品名称：\n[商品名称]\n\n商品数量：[商品数量]\n下单时间：[下单时间]\n订单金额：[订单金额]\n" . $couponstr . $remark . $cusurl;
 							$admins_openid = array(
 								'otdSc5hTp3WI6CrMdBESCzKqoD-E'
 								,'otdSc5saPLafN9M5KjfRklhqeVig'
