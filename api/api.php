@@ -106,38 +106,49 @@ class api {
         $count_fail =0;
         $fail_arr = [];
 
-        $post_data = array();
-        $post_data['first'] = array('value'=>$post['first'],'color'=>'#000000');
-        $post_data['keyword1'] = array('value'=>$post['keyword1'],'color'=>'#000000');
-        $post_data['keyword2'] = array('value'=>$post['keyword2'],'color'=>'#000000');
-        $post_data['remark'] = array('value'=>$post['remark'],'color'=>'#21a6df');
-        foreach (json_decode($post['oids'], true) as $v){
-            $result = $this->account->sendTplNotice($v,'ys25kSHm01WTEnoSPAJ1Cgjz_0Sqa-R5_LJdy4dRuIA',$post_data,$post['url']);
-            if(is_error($result)){
-                $count_fail ++;
-                $fail_arr[] = [
-                    'openid' => $v,
-                    'result' => $result,
-                ];
-            }else{
-                $count_ok ++;
-            }
-        }
-
-        returnAjax(1,'success',[
-            'ok'=>$count_ok,
-            'fail'=>$count_fail,
-            'fail_detail'=>$fail_arr,
-        ]);
-//        //测试
-//        $user_info['openid'] = 'ox3qqxIqS1X88OyfabiWI4mAFqmU'; //debugger
-//        $result = $this->account->sendTplNotice($user_info['openid'],'ys25kSHm01WTEnoSPAJ1Cgjz_0Sqa-R5_LJdy4dRuIA',$post_data,$post['url']);
-//
-//        if(is_error($result)){
-//            returnAjax(0,$result['message']);
-//        }else{
-//            returnAjax(1,'success');
+//        $post_data = array();
+//        $post_data['first'] = array('value'=>$post['first'],'color'=>'#000000');
+//        $post_data['keyword1'] = array('value'=>$post['keyword1'],'color'=>'#000000');
+//        $post_data['keyword2'] = array('value'=>$post['keyword2'],'color'=>'#000000');
+//        $post_data['remark'] = array('value'=>$post['remark'],'color'=>'#21a6df');
+//        foreach (json_decode($post['oids'], true) as $v){
+//            $result = $this->account->sendTplNotice($v,'-3neYnbrcgj1VSiuxVFfU5GtF866qr1dZfAMzmuK13c',$post_data,$post['url']);
+//            if(is_error($result)){
+//                $count_fail ++;
+//                $fail_arr[] = [
+//                    'openid' => $v,
+//                    'result' => $result,
+//                ];
+//            }else{
+//                $count_ok ++;
+//            }
 //        }
+//
+//        returnAjax(1,'success',[
+//            'ok'=>$count_ok,
+//            'fail'=>$count_fail,
+//            'fail_detail'=>$fail_arr,
+//        ]);
+        //测试
+        $text = "维达特惠装卷纸 700克/提 10卷装\n\n特价9.3元，仅剩八提，支持预定，支持配送至宿舍楼下（女生可配送至宿舍门口）";
+        $post_data = array();
+        $post_data['first'] = array('value'=>'同学，打扰你一会时间哦','color'=>'#000000');
+        $post_data['keyword1'] = array('value'=>'今日促销卫生纸活动','color'=>'#000000');
+        $post_data['keyword2'] = array('value'=>date('Y-m-d H:i:s', time()),'color'=>'#000000');
+        $post_data['remark'] = array('value'=>$text,'color'=>'#21a6df');
+        $user_info['openid'] = 'otdSc5n4uPzsU9Rd8LpaI6RDUMAg'; //debugger
+        $result = $this->account->sendTplNotice(
+            $user_info['openid']
+            ,'-3neYnbrcgj1VSiuxVFfU5GtF866qr1dZfAMzmuK13c'
+            ,$post_data
+            ,$post['url']
+        );
+
+        if(is_error($result)){
+            returnAjax(0,$result['message']);
+        }else{
+            returnAjax(1,'success');
+        }
     }
 }
 
