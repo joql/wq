@@ -908,8 +908,10 @@ class System_EweiShopV2Model
 						),
 					array(
 						'title' => '其他工具',
+						'route' => 'virtual',
 						'items' => array(
-							array('title' => '关注回复', 'route' => 'virtual')
+							array('title' => '关注回复', 'route' => 'index')
+							,array('title' => '活动推送', 'route' => 'sendactivitymsg', 'desc' => '最新活动消息推送')
 							)
 						)
 					)
