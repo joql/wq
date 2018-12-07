@@ -91,7 +91,9 @@ class Index_EweiShopV2Page extends WebPage
 			$condition .= ' AND g.`deleted`=0 and merchid>0 and checked=1';
 		}
 
-
+        if(!empty($_GPC['type']) && in_array($_GPC['type'], array('isnew', 'ishot', 'isdiscount', 'isrecommand', 'issendfree'))){
+            $condition .= ' AND g.`'.$_GPC['type'].'`=1';
+        }
 		$sql = 'SELECT g.id FROM ' . tablename('ewei_shop_goods') . 'g' . $sqlcondition . $condition . $groupcondition;
 		$total_all = pdo_fetchall($sql, $params);
 		$total = count($total_all);
