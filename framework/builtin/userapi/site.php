@@ -48,6 +48,13 @@ class UserApiModuleSite extends WeModuleSite {
 				array('1', '新闻'),
 			)
 		),
+		'rejectActivityMsg.php' => array(
+			'title' => '拒收活动推送',
+			'description' => '"拒收活动推送"',
+			'keywords' => array(
+				array('1', '拒收'),
+			)
+		),
 		'express.php' => array(
 			'title' => '快递查询',
 			'description' => '"快递+单号", 如: "申通1200041125"',
