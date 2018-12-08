@@ -72,6 +72,7 @@ class Sendactivitymsg_EweiShopV2Page extends ComWebPage
 	{
 		global $_W;
 		global $_GPC;
+		$reject_count = 3; //活动推送拒收次数
 
 		$class1 = $_GPC['send1'];
 		if ($class1 == 1) {
@@ -122,7 +123,12 @@ class Sendactivitymsg_EweiShopV2Page extends ComWebPage
 		else if ($class1 == 4) {
 			//全部推送
 			$where = '';
-			$members = pdo_fetchall('SELECT openid FROM ' . tablename('ewei_shop_member') . ' WHERE uniacid = \'' . $_W['uniacid'] . '\'' . $where, array(), 'openid');
+			$members = pdo_fetchall(
+				'SELECT m.openid FROM '
+				. tablename('ewei_shop_member') . 'm '
+				.'left join '.tablename('activity_msg_reject').' amr on amr.openid=m.openid'
+				.' WHERE ( amr.count is null or amr.count >='.$reject_count.') and m.uniacid = \'' . $_W['uniacid'] . '\'', array(), 'openid');
+			pdo_update('activity_msg_reject', 'count=count+1','count<'.$reject_count);
 			$openids = array_keys($members);
 			$plog = '活动消息推送方式: 全部会员 人数: ' . count($members);
 		}
