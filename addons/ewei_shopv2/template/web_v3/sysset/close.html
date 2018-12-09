@@ -79,15 +79,20 @@
 </div>
 <script type="text/javascript">
     $(function () {
-        $(document).on("click", 'input.valid', function () {
+        $(document).unbind('click').on("click", 'input.valid', function () {
             var close_type = $('input.valid:checked').val();
             if(close_type==2){
                 $(".auto-close").show();
             }else{
                 $(".auto-close").hide();
             }
-        })
+        });
+        {if $data['week']!=''}
+        $('#week').val([{$data['week']}]).trigger('change');
+        {/if}
+
     })
+
 
 </script>
 {template '_footer'}     

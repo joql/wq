@@ -771,9 +771,7 @@ class Index_EweiShopV2Page extends WebPage
 			$data['flag'] = $shop['close'];
 			$data['detail'] = $shop['closedetail'];
 			$data['url'] = $shop['closeurl'];
-			//$week = explode(',', $data['week']);
-			$times = $data['times'];
-		}
+    }
 
 
 		include $this->template();
