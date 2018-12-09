@@ -238,7 +238,7 @@ class Sendactivitymsg_EweiShopV2Page extends ComWebPage
 				'remark' => array('value' => $data['remark'], 'color' => $data['remarkcolor'])
 				);
 			$msg['keyword1'] = array('value' => $data['keyword1'], 'color' => $data['keyword1color']);
-			$msg['keyword2'] = array('value' => $data['keyword2'], 'color' => $data['keyword2color']);
+			$msg['keyword2'] = array('value' => date('Y-m-d H:i:s', TIMESTAMP), 'color' => $data['keyword2color']);
 
 			if (empty($data['templateurl'])) {
 

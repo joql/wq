@@ -8,7 +8,7 @@ $config['db']['master']['username'] = 'root';
 $config['db']['master']['password'] = 'admin001';
 $config['db']['master']['port'] = '3306';
 $config['db']['master']['database'] = 'kq';
-$config['db']['master']['charset'] = 'utf8';
+$config['db']['master']['charset'] = 'utf8mb4';
 $config['db']['master']['pconnect'] = 0;
 $config['db']['master']['tablepre'] = 'ims_';
 
