@@ -13,6 +13,9 @@
                 <label class="radio-inline">
                     <input type="radio" name="data[flag]" value='1' {if $data['flag']==1}checked{/if} /> 关闭
                 </label>
+                <label class="radio-inline">
+                    <input type="radio" name="data[flag]" value='2' {if $data['flag']==2}checked{/if} /> 定时关闭
+                </label>
 
                 {else}
 
@@ -20,6 +23,24 @@
                 {/if}
             </div>
         </div>
+        <div class="form-group row auto-close" {if $data['flag']!=2}hidden{/if}>
+            <label class="col-lg control-label">关闭时间</label>
+            <div class="col-sm-4 col-xs-6">
+                <select id="week"  name='week[]' class="form-control select2" style='width:205px;' multiple='' >
+                    <option value="1" >周一</option>
+                    <option value="2" >周二</option>
+                    <option value="3" >周三</option>
+                    <option value="4" >周四</option>
+                    <option value="5" >周五</option>
+                    <option value="6" >周六</option>
+                    <option value="7" >周日</option>
+                </select>
+            </div>
+            <div class="col-sm-4 col-xs-6">
+                <input type="text" name="times" class="form-control" placeholder="关闭时间段，例：19:59-20:31" value="{$data['times']}" />
+            </div>
+        </div>
+
         <div class="form-group">
             <label class="col-lg control-label">商城关闭跳转链接</label>
             <div class="col-sm-9 col-xs-12">
@@ -56,6 +77,18 @@
 
     </form>
 </div>
+<script type="text/javascript">
+    $(function () {
+        $(document).on("click", 'input.valid', function () {
+            var close_type = $('input.valid:checked').val();
+            if(close_type==2){
+                $(".auto-close").show();
+            }else{
+                $(".auto-close").hide();
+            }
+        })
+    })
 
+</script>
 {template '_footer'}     
 <!--4000097827-->

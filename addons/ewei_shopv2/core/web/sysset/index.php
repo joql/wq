@@ -751,6 +751,8 @@ class Index_EweiShopV2Page extends WebPage
 			$data['flag'] = intval($data['flag']);
 			$data['detail'] = m('common')->html_images($data['detail']);
 			$data['url'] = trim($data['url']);
+            $data['week'] = implode(',', $_GPC['week']);
+            $data['times'] = $_GPC['times'];
 			m('common')->updateSysset(array('close' => $data));
 			$shop = m('common')->getSysset('shop');
 			$shop['close'] = $data['flag'];
@@ -769,6 +771,8 @@ class Index_EweiShopV2Page extends WebPage
 			$data['flag'] = $shop['close'];
 			$data['detail'] = $shop['closedetail'];
 			$data['url'] = $shop['closeurl'];
+			//$week = explode(',', $data['week']);
+			$times = $data['times'];
 		}
 
 

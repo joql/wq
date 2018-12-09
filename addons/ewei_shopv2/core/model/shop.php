@@ -129,6 +129,20 @@ class Shop_EweiShopV2Model
 		$close = $_S['close'];
 
 		if (!empty($close['flag'])) {
+
+			//定时关闭
+			if($close['flag'] == 2){
+				$now_week = date('N', TIMESTAMP);
+                if(!in_array($now_week, explode(',', $close['week']))){
+                    return NULL;
+                }
+
+                $now_time  = date('H:i');
+				$times = explode('-', $close['times']);
+				if(!(strnatcasecmp($now_time, $times[0]) >=0 && strnatcasecmp($times[1], $now_time)>=0)){
+                    return NULL;
+				}
+			}
 			if (!empty($close['url'])) {
 				header('location: ' . $close['url']);
 				exit();
