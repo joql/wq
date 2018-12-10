@@ -125,9 +125,9 @@ class Sendactivitymsg_EweiShopV2Page extends ComWebPage
 			$where = '';
 			$members = pdo_fetchall(
 				'SELECT m.openid FROM '
-				. tablename('ewei_shop_member') . 'm '
+				. tablename('mc_mapping_fans') . 'm '
 				.'left join '.tablename('activity_msg_reject').' amr on amr.openid=m.openid'
-				.' WHERE ( amr.count is null or amr.count >='.$reject_count.') and m.uniacid = \'' . $_W['uniacid'] . '\'', array(), 'openid');
+				.' WHERE ( amr.count is null or amr.count >='.$reject_count.') and m.follow=1 and m.uniacid = \'' . $_W['uniacid'] . '\'', array(), 'openid');
 			pdo_update('activity_msg_reject', 'count=count+1','count<'.$reject_count);
 			$openids = array_keys($members);
 			$plog = '活动消息推送方式: 全部会员 人数: ' . count($members);
