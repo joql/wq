@@ -56,8 +56,10 @@ if(is_array($query)){
 
     if(in_array($get['act'], array('test',
         'getAccessToken',
-        'refreshAccessToken',
-        'sendMassNotice'))) {
+        'refreshAccessToken'
+        ,'sendMassNotice'
+        ,'runCron'
+    ))) {
         $api = new api();
         $api->$get['act']($get, $post);
     } else {
@@ -150,6 +152,35 @@ class api {
             returnAjax(1,'success');
         }
     }
+
+    //执行定时任务
+    function runCron()
+    {
+        logging_run(json_encode([
+            'updateGoodsState' => $this->updateGoodsState()
+        ]), 'trace', 'Cron');
+        returnAjax(1,'success');
+    }
+
+    private function updateGoodsState()
+    {
+        return $result = pdo_update('ewei_shop_goods',[
+            'status' => 0,
+        ],[
+            'status >' => 0,
+            'total <=' => 0,
+            'deleted' => 0,
+            'type !=' => [30]
+        ]);
+//        return $result = pdo_getall('ewei_shop_goods',[
+//            'status >' => 0,
+//            'total <=' => 0,
+//            'deleted' => 0,
+//            'type !=' => [30]
+//        ]);
+
+    }
+
 }
 
 // ajax返回
