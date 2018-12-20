@@ -1096,15 +1096,18 @@ class Notice_EweiShopV2Model
 								,'otdSc5n4uPzsU9Rd8LpaI6RDUMAg'
 							);
 							foreach ($admins_openid as $v){
-                                $this->sendNotice(array(
-                                	'openid' => $v
-								, 'tag' => 'pay'
-								, 'default' => $msg
-								, 'cusdefault' => $text
-								, 'url' => $url
-								, 'datas' => $datas
-								, 'appurl' => $appurl
-								));
+                                load()->func('logging');
+                                logging_run
+								(json_encode($this->sendNotice(array(
+                                        'openid' => $v
+                                    , 'tag' => 'pay'
+                                    , 'default' => $msg
+                                    , 'cusdefault' => $text
+                                    , 'url' => $url
+                                    , 'datas' => $datas
+                                    , 'appurl' => $appurl
+                                    )))
+									, 'trace', 'orderNotice');
 							}
 						}
 
