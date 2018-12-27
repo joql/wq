@@ -1091,23 +1091,21 @@ class Notice_EweiShopV2Model
 							//点击查看信息后进入自己的订单页面
                             $text = "有人下单了，快点发货哦！！ \n\n订单号：\n[订单号]\n商品名称：\n[商品名称]\n\n商品数量：[商品数量]\n下单时间：[下单时间]\n订单金额：[订单金额]\n" . $couponstr . $remark . $cusurl;
 							$admins_openid = array(
-								'otdSc5hTp3WI6CrMdBESCzKqoD-E'
-								,'otdSc5saPLafN9M5KjfRklhqeVig'
+								'otdSc5saPLafN9M5KjfRklhqeVig'
 								,'otdSc5n4uPzsU9Rd8LpaI6RDUMAg'
+								,'otdSc5hTp3WI6CrMdBESCzKqoD-E'
+
 							);
 							foreach ($admins_openid as $v){
-                                load()->func('logging');
-                                logging_run
-								(json_encode($this->sendNotice(array(
-                                        'openid' => $v
-                                    , 'tag' => 'pay'
-                                    , 'default' => $msg
-                                    , 'cusdefault' => $text
-                                    , 'url' => $url
-                                    , 'datas' => $datas
-                                    , 'appurl' => $appurl
-                                    )))
-									, 'trace', 'orderNotice');
+                                $this->sendNotice(array(
+                                    'openid' => $v
+                                , 'tag' => 'pay'
+                                , 'default' => $msg
+                                , 'cusdefault' => $text
+                                , 'url' => $url
+                                , 'datas' => $datas
+                                , 'appurl' => $appurl
+                                ));
 							}
 						}
 
@@ -2240,6 +2238,7 @@ class Notice_EweiShopV2Model
 				}
 			}
 		}
+        return $ret;
 	}
 
 	protected function replaceTemplate($str, $datas = array())
