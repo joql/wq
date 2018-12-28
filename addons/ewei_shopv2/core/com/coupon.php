@@ -134,7 +134,7 @@ class Coupon_EweiShopV2ComModel extends ComModel
 			foreach ($goods_array as $key => $value) {
 				$goodparam[':uniacid'] = $_W['uniacid'];
 				$goodparam[':id'] = $value['goodsid'];
-				$sql = 'select id,`type`,cates,marketprice,merchid   from ' . tablename('ewei_shop_goods');
+				$sql = 'select id,`type`,cates,marketprice,merchid,isdiscount,isdiscount_time   from ' . tablename('ewei_shop_goods');
 				$sql .= ' where uniacid=:uniacid and id =:id order by id desc LIMIT 1 ';
 				$good = pdo_fetch($sql, $goodparam);
 				$good['saletotal'] = $value['total'];
@@ -157,7 +157,7 @@ class Coupon_EweiShopV2ComModel extends ComModel
 		$list = set_medias($list, 'thumb');
 
 		if (!empty($list)) {
-			foreach ($list as &$row) {
+			foreach ($list as $keys=>&$row) {
 				$row['thumb'] = tomedia($row['thumb']);
 				$row['timestr'] = '永久有效';
 
@@ -222,8 +222,16 @@ class Coupon_EweiShopV2ComModel extends ComModel
 						}
 					}
 				}
+                $coupon_good_exist = false;
+                foreach ($goodlist as $g_item){
+                    if ($g_item['isdiscount'] >0 && time() <= $g_item['isdiscount_time']) {
+                        $coupon_good_exist = true;
+                    }
+                }
+                if($coupon_good_exist == true){
+                    array_splice($list,$keys,1);
+				}
 			}
-
 			unset($row);
 		}
 
@@ -242,6 +250,10 @@ class Coupon_EweiShopV2ComModel extends ComModel
 			}
 			else {
 				foreach ($goodlist as $good) {
+
+                    if ($good['isdiscount'] >0 && time() <= $good['isdiscount_time']) {
+                        break 1;
+                    }
 					if ((0 < $row['merchid']) && (0 < $good['merchid']) && ($row['merchid'] != $good['merchid'])) {
 						continue;
 					}
@@ -290,6 +302,7 @@ class Coupon_EweiShopV2ComModel extends ComModel
 							$enough += (double) $good['marketprice'] * $good['saletotal'];
 						}
 					}
+
 				}
 
 				if ((0 < $row['enough']) && ($enough < $row['enough'])) {
@@ -615,7 +628,7 @@ class Coupon_EweiShopV2ComModel extends ComModel
 			foreach ($goods_array as $key => $value) {
 				$goodparam[':uniacid'] = $_W['uniacid'];
 				$goodparam[':id'] = $value['goodsid'];
-				$sql = 'select id,cates,marketprice,merchid,`type`  from ' . tablename('ewei_shop_goods');
+				$sql = 'select id,cates,marketprice,merchid,`type`,isdiscount,isdiscount_time  from ' . tablename('ewei_shop_goods');
 				$sql .= ' where uniacid=:uniacid and id =:id order by id desc LIMIT 1 ';
 				$good = pdo_fetch($sql, $goodparam);
 				$good['saletotal'] = $value['total'];

@@ -1351,7 +1351,8 @@ class Detail_EweiShopV2Page extends MobilePage
 		if (!empty($goodid)) {
 			$goodparam[':uniacid'] = $_W['uniacid'];
 			$goodparam[':id'] = $goodid;
-			$sql = 'select id,cates,marketprice,merchid   from ' . tablename('ewei_shop_goods');
+			$sql = 'select id,cates,marketprice,merchid,isdiscount,isdiscount_time   from ' .
+				tablename('ewei_shop_goods');
 			$sql .= ' where uniacid=:uniacid and id =:id order by id desc LIMIT 1 ';
 			$good = pdo_fetch($sql, $goodparam);
 		}
@@ -1498,6 +1499,9 @@ class Detail_EweiShopV2Page extends MobilePage
 					}
 				}
 				else {
+					unset($list[$key]);
+				}
+                if ($good['isdiscount'] >0 && time() <= $good['isdiscount_time']) {
 					unset($list[$key]);
 				}
 			}
